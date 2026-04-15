@@ -1,0 +1,9 @@
+{
+  "title": "Nova tarefa de teste",
+  "description": "Descrição da tarefa de teste para Cypress",
+  "priority": "high",
+  "tags": ["teste", "cypress"],
+  "assignedTo": "user1",
+  "estimatedTime": 2,
+  "deadline": "2024-12-30"
+}

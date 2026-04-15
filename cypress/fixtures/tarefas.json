@@ -1,0 +1,37 @@
+{
+  "tarefas": [
+    {
+      "id": "1",
+      "title": "Implementar login",
+      "description": "Criar sistema de autenticação com JWT",
+      "status": "todo",
+      "priority": "high",
+      "deadline": "2024-12-31",
+      "estimatedTime": 4,
+      "tags": ["backend", "autenticação"],
+      "assignedTo": "user1"
+    },
+    {
+      "id": "2",
+      "title": "Corrigir bug",
+      "description": "Corrigir erro de validação no formulário",
+      "status": "doing",
+      "priority": "medium",
+      "deadline": "2024-12-20",
+      "estimatedTime": 2,
+      "tags": ["frontend", "bug"],
+      "assignedTo": "user2"
+    },
+    {
+      "id": "3",
+      "title": "Documentar API",
+      "description": "Atualizar documentação Swagger",
+      "status": "done",
+      "priority": "low",
+      "deadline": "2024-12-25",
+      "estimatedTime": 3,
+      "tags": ["documentação", "api"],
+      "assignedTo": "user1"
+    }
+  ]
+}

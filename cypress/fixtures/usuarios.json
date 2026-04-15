@@ -1,0 +1,28 @@
+{
+  "usuarios": [
+    {
+      "id": "user1",
+      "name": "João Silva",
+      "email": "joao.silva@taskflow.com",
+      "password": "senha123",
+      "avatar": "👨‍💼",
+      "role": "admin"
+    },
+    {
+      "id": "user2",
+      "name": "Maria Santos",
+      "email": "maria.santos@taskflow.com",
+      "password": "senha456",
+      "avatar": "👩‍💻",
+      "role": "member"
+    },
+    {
+      "id": "user3",
+      "name": "Pedro Costa",
+      "email": "pedro.costa@taskflow.com",
+      "password": "senha789",
+      "avatar": "👨‍🔧",
+      "role": "member"
+    }
+  ]
+}

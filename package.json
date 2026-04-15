@@ -4,6 +4,16 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "dev:server": "npm run dev --prefix server",
-    "dev:client": "npm run dev --prefix client"
+    "dev:client": "npm run dev --prefix client",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^15.13.1",
+    "concurrently": "^8.2.2",
+    "typescript": "^5.1.6",
+    "ts-loader": "^9.5.1",
+    "webpack": "^5.89.0",
+    "@cypress/webpack-preprocessor": "^6.0.1"
   }
 }
