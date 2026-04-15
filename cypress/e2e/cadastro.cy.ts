@@ -6,17 +6,26 @@ describe('Testes de Cadastro', () => {
   });
 
   it('deve permitir cadastro de nova tarefa', () => {
+    const taskTitle = 'Tarefa de cadastro';
     cy.contains('button', /nova tarefa/i).click();
-    cy.get('input[placeholder*="título"]').type('Tarefa de cadastro');
-    cy.get('textarea[placeholder*="descrição"]').type('Descrição da tarefa');
-    cy.contains('button', /adicionar/i).click();
-    cy.contains('Tarefa de cadastro').should('be.visible');
+    
+    // Espera o modal/formulário abrir e os elementos ficarem visíveis
+    cy.get('[data-testid="input-titulo-tarefa"]', { timeout: 5000 }).should('be.visible');
+    
+    cy.get('[data-testid="input-titulo-tarefa"]').type(taskTitle);
+    cy.get('[data-testid="input-descricao-tarefa"]').type('Descrição da tarefa');
+    cy.get('[data-testid="btn-adicionar-tarefa"]').click();
+    cy.contains(taskTitle).should('be.visible');
   });
 
   it('deve validar campos obrigatórios', () => {
     cy.contains('button', /nova tarefa/i).click();
-    cy.contains('button', /adicionar/i).click();
-    // Verificar se há validação
-    cy.get('input[placeholder*="título"]').should('have.value', '');
+    
+    // Espera o modal/formulário abrir
+    cy.get('[data-testid="input-titulo-tarefa"]', { timeout: 5000 }).should('be.visible');
+    
+    cy.get('[data-testid="btn-adicionar-tarefa"]').click();
+    // Verificar se há validação - o input deve estar vazio
+    cy.get('[data-testid="input-titulo-tarefa"]').should('have.value', '');
   });
 });

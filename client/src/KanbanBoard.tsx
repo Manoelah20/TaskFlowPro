@@ -1005,6 +1005,7 @@ export const KanbanBoard: React.FC = () => {
             </button>
             
             <select
+              data-testid="tag-filter"
               value={filterTag}
               onChange={(e) => setFilterTag(e.target.value)}
               title="Filtrar por tag"
@@ -1024,6 +1025,7 @@ export const KanbanBoard: React.FC = () => {
             </select>
             
             <select
+              data-testid="user-filter"
               value={filterAssignedTo}
               onChange={(e) => setFilterAssignedTo(e.target.value)}
               title="Filtrar por usuário"
@@ -1074,6 +1076,7 @@ export const KanbanBoard: React.FC = () => {
                 value={newTask}
                 onChange={(e) => setNewTask(e.target.value)}
                 placeholder="Título da tarefa..."
+                data-testid="input-titulo-tarefa"
                 style={{
                   width: '100%',
                   padding: '0.5rem',
@@ -1089,6 +1092,7 @@ export const KanbanBoard: React.FC = () => {
                 value={newTaskDescription}
                 onChange={(e) => setNewTaskDescription(e.target.value)}
                 placeholder="Descrição (opcional)..."
+                data-testid="input-descricao-tarefa"
                 style={{
                   width: '100%',
                   padding: '0.5rem',
@@ -1191,6 +1195,7 @@ export const KanbanBoard: React.FC = () => {
               <div style={{ display: 'flex', gap: '0.5rem' }}>
                 <button
                   onClick={addTask}
+                  data-testid="btn-adicionar-tarefa"
                   style={{
                     flex: 1,
                     padding: '0.5rem',
@@ -1894,7 +1899,7 @@ export const KanbanBoard: React.FC = () => {
                   const timerActive = activeTimer === task.id;
                   
                   return (
-                  <div key={task.id} style={{
+                  <div key={task.id} data-testid="task-card" style={{
                     background: 'rgba(51, 65, 85, 0.8)',
                     border: '1px solid #475569',
                     borderRadius: '0.5rem',
@@ -2280,6 +2285,7 @@ export const KanbanBoard: React.FC = () => {
                           value={newComment}
                           onChange={(e) => setNewComment(e.target.value)}
                           placeholder="Adicionar comentário..."
+                          data-testid="input-comentario"
                           style={{
                             width: '100%',
                             padding: '0.375rem',
@@ -2300,6 +2306,7 @@ export const KanbanBoard: React.FC = () => {
                                 setCommentingTask('');
                               }
                             }}
+                            data-testid="btn-enviar-comentario"
                             style={{
                               padding: '0.25rem 0.5rem',
                               background: '#3b82f6',
