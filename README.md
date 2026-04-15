@@ -116,6 +116,12 @@ npm run dev
 
 ---
 
+## ✅ Qualidade e Testes
+
+O projeto conta com uma suíte de testes automatizados E2E (End-to-End) desenvolvida em Cypress, cobrindo fluxos críticos como criação de tarefas, movimentação no Kanban, filtros por tags e responsividade móvel.
+
+---
+
 ## 🎮 Como Usar
 
 ### Kanban Board
